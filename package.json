@@ -1,0 +1,8 @@
+{
+  "name": "BarberPro",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/emersonneutzling/BarberPro.git",
+  "author": "Emerson Moreira Neutzling <emerson.neutzling@gmail.com>",
+  "license": "MIT"
+}
