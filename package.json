@@ -4,5 +4,8 @@
   "main": "index.js",
   "repository": "https://github.com/emersonneutzling/BarberPro.git",
   "author": "Emerson Moreira Neutzling <emerson.neutzling@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^5.5.4"
+  }
 }
