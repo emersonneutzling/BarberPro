@@ -9,6 +9,14 @@ interface HaicurtRequest{
 class ListHaircutService{
     async execute({ user_id, status}: HaicurtRequest){
 
+        const haircut = await prismaCliente.haircut.findMany({
+            where:{
+                user_id: user_id,
+                status: status === 'true' ? true : false
+            }
+        })
+
+        return haircut;
     }
 } 
 
