@@ -3,8 +3,10 @@ import { CreateUserController } from "./controllers/user/CreateUserController";
 import { AuthUserController } from "./controllers/user/AuthUserController";
 import { DetailUserController } from "./controllers/user/DetailUserController";
 import { UpdateUsercontroller } from "./controllers/user/UpdateUserController";
+
 import { CreateHaircutController } from "./controllers/haircut/CreateHaircutController";
 import { ListHaircutController } from "./controllers/haircut/ListHaircutController";
+import { UpdateHaircutController } from "./controllers/haircut/UpdateHaircutController";
 
 import { isAuthenticted } from "./middlewares/isAuthenticted";
 
@@ -20,7 +22,8 @@ router.put('/users', isAuthenticted, new UpdateUsercontroller().handle)
 
 // --- Rotas Haircut ---
 router.post('/haircut', isAuthenticted, new CreateHaircutController().handle)
-router.get('/haircuts', isAuthenticted, new ListHaircutController().handle )
+router.get('/haircuts', isAuthenticted, new ListHaircutController().handle)
+router.put('/haircut', isAuthenticted, new UpdateHaircutController().handle)
 
 
 export { router };
