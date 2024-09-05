@@ -8,6 +8,8 @@ import { CreateHaircutController } from "./controllers/haircut/CreateHaircutCont
 import { ListHaircutController } from "./controllers/haircut/ListHaircutController";
 import { UpdateHaircutController } from "./controllers/haircut/UpdateHaircutController";
 import { CheckSubscriptionController } from "./controllers/haircut/CheckSubscriptionController";
+import { CountHaircutController } from "./controllers/haircut/CountHaircutController";
+import { DetailHaircutsController } from "./controllers/haircut/DetailHaircutsController";
 
 import { isAuthenticted } from "./middlewares/isAuthenticted";
 
@@ -26,6 +28,8 @@ router.post('/haircut', isAuthenticted, new CreateHaircutController().handle)
 router.get('/haircuts', isAuthenticted, new ListHaircutController().handle)
 router.put('/haircut', isAuthenticted, new UpdateHaircutController().handle)
 router.get('/haircut/check', isAuthenticted, new CheckSubscriptionController().handle)
+router.get('/haircut/count', isAuthenticted, new CountHaircutController().handle)
+router.get('/haircut/detail', isAuthenticted, new DetailHaircutsController().handle)
 
 
 export { router };
