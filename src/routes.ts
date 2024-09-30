@@ -16,6 +16,7 @@ import { ListScheduleController } from "./controllers/schedule/ListScheduleContr
 import { FinishScheduleController } from "./controllers/schedule/FinishScheduleController";
 
 import { SubscribeController } from "./controllers/subscripition/SubscribeController";
+import { WebhooksController } from "./controllers/subscripition/WebhooksController"
 
 import { isAuthenticted } from "./middlewares/isAuthenticted";
 
@@ -47,6 +48,7 @@ router.delete('/schedule/finish', isAuthenticted, new FinishScheduleController()
 // --- Rotas Subscriptions / Pagamentos ---
 
 router.post('/subscribe', isAuthenticted, new SubscribeController().handle)
+router.post('/webhooks', new WebhooksController().handle)
 
 
 export { router };
